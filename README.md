@@ -81,3 +81,60 @@ int main ()
  	printf("\n");
  	}
 ```
+## 計算幾週與幾天 
+
+
+```C
+#include <stdio.h>
+int main ()
+{
+	int n;
+	scanf("%d",&n);
+	printf("%d %d\n",n/7,n%7);
+}
+```
+## 計程車資計算
+```C
+#include <stdio.h>
+int main ()
+{
+	int n;
+	scanf("%d",&n);
+	if(n<=2000)
+	printf("100\n");
+	else if (n>2000)
+	printf("%d\n",((n-2499)/500)*5+100);
+}
+```
+## 整數間最大距離
+```C
+#include <stdio.h>
+int main ()
+{
+	int a,b,c;
+	scanf("%d%d%d",&a,&b,&c);
+	if(a>b&&b>c)printf("%d\n",a-c);
+	else if(a>c&&c>b)printf("%d\n",a-b);
+	else if(b>a&&a>c)printf("%d\n",b-c);
+	else if(b>c&&c>a)printf("%d\n",b-a);
+	else if(c>b&&b>a)printf("%d\n",c-a);
+	else if(c>a&&a>b)printf("%d\n",c-b);
+}
+```
+## 兩數間可被5整除的整數
+```C
+#include <stdio.h>
+int main ()
+{
+	int x,y ,temp;
+	scanf("%d%d",&x,&y);
+	if(x>y)
+	{
+		temp=x;
+		x=y;
+		y=temp;
+	}
+	for (int i=x;i<=y;i++)
+		if(i%5==0) printf("%d\n",i);
+}
+```
