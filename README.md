@@ -1,6 +1,6 @@
 # cce 0312
 
-##錯誤
+## 錯誤
 ```C
 #include <stdio.h>
 int main ()
@@ -49,7 +49,7 @@ int main ()
 }
 ```
 
-##計算陣列平方值
+## 計算陣列平方值
 
 ```C
 #include <stdio.h>
@@ -63,4 +63,21 @@ int main ()
 		printf("\n");
 		
 }
+```
+
+## 大小寫轉換 
+```C
+#include <stdio.h>
+int main ()
+{
+ char a[10];
+ scanf("%s",&a);
+ for(int i=0;i<10;i++){
+ 	if(a[i]>='0'&&a[i]<='9')printf("%c",a[i]);
+ 	else if (a[i]>='A'&&a[i]<='Z')printf("%c",a[i]+32);
+ 	else if (a[i]>='a'&&a[i]<='z')printf("%c",a[i]-32);
+ 	else if (a[i]=='\0') break;
+ 	}
+ 	printf("\n");
+ 	}
 ```
